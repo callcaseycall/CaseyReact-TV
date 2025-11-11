@@ -47,4 +47,5 @@ Build out the `<App>`, `<ShowDetails>`, and `<ShowSelection>` components to rend
 ## Submission
 
 Please submit the link to your public GitHub repository.
+
 # react-tv-solution

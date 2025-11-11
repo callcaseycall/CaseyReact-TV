@@ -1,26 +1,22 @@
 import "./episodes.css";
 
 /** A list of episode names that allows the user to select an episode */
-export default function EpisodeList({
-  name,
-  episodes,
-  selectedEpisode,
-  setSelectedEpisode,
-}) {
+export default function EpisodeList({ episodes, setSelectedEpisode }) {
   return (
-    <section className="episodes">
-      <h2>{name}</h2>
-      <ol>
-        {episodes.map((episode) => (
-          <li
-            key={episode.number}
-            onClick={() => setSelectedEpisode(episode)}
-            className={episode === selectedEpisode ? "selected" : ""}
+    <ul>
+      {episodes.map((episode) => (
+        <li key={episode.number}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setSelectedEpisode(episode);
+            }}
           >
             {episode.title}
-          </li>
-        ))}
-      </ol>
-    </section>
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
